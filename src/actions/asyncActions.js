@@ -1,19 +1,14 @@
 import axios from "axios";
 import { FETCH } from "../constants/ActionTypes";
 
-export const FETCH = () => dispatch => {
+export const fetchApi = () => dispatch => {
   axios
-    .get("/api/profile")
+    .get("https://swapi.co/api/people/1/")
     .then(res =>
       dispatch({
-        type: types.GET_PROFILE,
+        type: FETCH,
         payload: res.data
       })
     )
-    .catch(err =>
-      dispatch({
-        type: types.GET_PROFILE,
-        payload: {}
-      })
-    );
+    .catch(err => console.log(err));
 };

@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { addOne, minusOne } from "../../actions/counterActions";
+import { fetchApi } from "../../actions/asyncActions";
 import PropTypes from "prop-types";
 
 class MainApp extends Component {
+  componentDidMount() {
+    this.props.fetchApi();
+  }
   render() {
+    const api = JSON.stringify(this.props.async);
     return (
       <div>
-        <h4>Counter App</h4>
+        <h4>Mock App</h4>
         <button
           className="waves-effect waves-light btn"
           onClick={this.props.addOne}
@@ -23,13 +28,15 @@ class MainApp extends Component {
           Minus
         </button>
         <h5>{this.props.counter}</h5>
+        <h5>{api}</h5>
       </div>
     );
   }
 }
 
 const mapState = state => ({
-  counter: state.counter
+  counter: state.counter,
+  async: state.async
 });
 
 MainApp.propTypes = {
@@ -40,5 +47,5 @@ MainApp.propTypes = {
 
 export default connect(
   mapState,
-  { addOne, minusOne }
+  { addOne, minusOne, fetchApi }
 )(MainApp);
