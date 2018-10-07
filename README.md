@@ -25,7 +25,7 @@ Client server run in http://localhost:3000/
 ## Built With
 
 - [Reactjs](https://reactjs.org/docs/getting-started.html) - The front end framework used
-- [ReduxJS](https://redux.js.org/) - Used for state management for Fron end
+- [ReduxJS](https://redux.js.org/) - Used for state management for Front end
 
 ## Authors
 
