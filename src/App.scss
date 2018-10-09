@@ -1,0 +1,11 @@
+$primary-color: rgb(208, 228, 214);
+body {
+  background-color: $primary-color;
+  h1 {
+    color: #333;
+  }
+
+  button {
+    background-color: rgb(155, 75, 187);
+  }
+}
