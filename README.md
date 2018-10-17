@@ -1,7 +1,7 @@
 # React Boilerplate with Redux, Redux-Thunk, MateralizeCSS, React-Router
 
-Version 1.
-Version 2: Add SASS and boilerplate for SASS
+- Version 1.
+- Version 2: Add SASS and boilerplate for SASS
 
 ## Getting Started
 
