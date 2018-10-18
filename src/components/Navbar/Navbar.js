@@ -1,64 +1,35 @@
 import React, { Component } from "react";
+import logo from "../../assets/img/Zalando_Lounge_logo.png";
 
 class Navbar extends Component {
-  sidenav = React.createRef();
-
-  componentDidMount() {
-    window.M.Sidenav.init(this.sidenav, {
-      inDuration: 350,
-      outDuration: 350,
-      edge: "left"
-    });
-  }
-
   render() {
     return (
       <div>
-        <nav>
-          <div className="nav-wrapper">
-            <a href="#!" className="brand-logo">
-              Logo
+        <nav className="navbar">
+          <div className="navbar__iconbox">
+            <a href="https://www.google.com/" className="navbar__iconbox__icon">
+              <i className="fas fa-home" />
+              Homepage
             </a>
-            <a href="/" data-target="mobile-demo" className="sidenav-trigger">
-              <i className="material-icons">menu</i>
+            <a href="https://www.google.com/" className="navbar__iconbox__icon">
+              <i className="fas fa-percent" />
+              Promotion
             </a>
-            <ul className="right hide-on-med-and-down">
-              <li>
-                <a href="sass.html">Sass</a>
-              </li>
-              <li>
-                <a href="badges.html">Components</a>
-              </li>
-              <li>
-                <a href="collapsible.html">Javascript</a>
-              </li>
-              <li>
-                <a href="mobile.html">Mobile</a>
-              </li>
-            </ul>
+          </div>
+          <a href="https://www.google.com/" className="navbar__logo">
+            <img src={logo} alt="logo" />
+          </a>
+          <div className="navbar__iconbox">
+            <a href="https://www.google.com/" className="navbar__iconbox__icon">
+              <i className="fas fa-user" />
+              Account
+            </a>
+            <a href="https://www.google.com/" className="navbar__iconbox__icon">
+              <i className="fas fa-shopping-bag" />
+              Bag
+            </a>
           </div>
         </nav>
-
-        <ul
-          className="sidenav"
-          ref={sidenav => {
-            this.sidenav = sidenav;
-          }}
-          id="mobile-demo"
-        >
-          <li>
-            <a href="sass.html">Sass</a>
-          </li>
-          <li>
-            <a href="badges.html">Components</a>
-          </li>
-          <li>
-            <a href="collapsible.html">Javascript</a>
-          </li>
-          <li>
-            <a href="mobile.html">Mobile</a>
-          </li>
-        </ul>
       </div>
     );
   }

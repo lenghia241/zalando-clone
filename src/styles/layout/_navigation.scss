@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #353535;
+  padding: $content-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    img {
+      height: 4rem;
+    }
+  }
+
+  &__iconbox {
+    display: flex;
+    &__icon {
+      text-decoration: none;
+      border: $border-slim;
+      border-top: none;
+      border-bottom: none;
+      padding: 0.4rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column;
+      height: 6rem;
+      width: 9rem;
+
+      i {
+        color: white;
+      }
+    }
+  }
+}

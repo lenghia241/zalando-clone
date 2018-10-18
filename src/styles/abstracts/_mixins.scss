@@ -1,0 +1,46 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//MEDIA QUERIES MANAGER
+/*
+0 - 600px: Phone
+600-900px: Tab portrait
+900-1200: Tab - landscape
+1200-1800: Desktop (current version)
+1800: big desktop
+
+1em = 16px;
+
+ORDER: Bade + typography > general layout + Grid > page > components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    } //600
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    } //900
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    } //1200
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
