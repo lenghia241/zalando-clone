@@ -1,8 +1,11 @@
 .sortBar {
-  padding: 3.5rem;
+  padding-bottom: $content-padding-mainfeatures;
   font-family: "Open Sans Condensed", "Arial", sans-serif;
   color: $color-grey-dark-3;
   &-container {
+    padding: 1rem 0;
+    width: 100%;
+    height: 100%;
     border-top: $border-slim;
     border-bottom: $border-slim;
   }
@@ -13,14 +16,19 @@
     color: $color-grey-dark-3;
     &:before {
       content: "";
-      height: 50%; /* or 100px */
+      padding-left: 1.2rem;
       border-left: $border-slim;
+      &:first-child {
+        border-left: none;
+      }
     }
-    &:first-child {
-      border-left: none;
-    }
+
     &:active {
       font-weight: 800;
+    }
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

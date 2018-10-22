@@ -6,6 +6,10 @@
   }
 }
 
+@mixin fontSlim {
+  font-family: "Open Sans Condensed", "Arial", sans-serif;
+}
+
 //MEDIA QUERIES MANAGER
 /*
 0 - 600px: Phone

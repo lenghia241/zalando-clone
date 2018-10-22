@@ -1,8 +1,11 @@
-.mainFeature-wrapper {
+.mainFeature {
   position: relative;
   margin: $content-padding-main;
   margin-top: -15rem;
   background-color: $color-grey-light-2;
-  width: 80%;
-  height: 1000px;
+  &__wrapper {
+    padding: $content-padding-mainfeatures;
+    display: flex;
+    flex-direction: column;
+  }
 }

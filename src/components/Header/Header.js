@@ -14,7 +14,7 @@ class Header extends Component {
           />
           <div className="banner__brand">
             <h1 className="banner__brand__name">CAMEL ACTIVE</h1>
-            <button className="banner__brand__button">Shop now!</button>
+            <button className="btn--transparent">Shop now!</button>
           </div>
         </div>
       </Fragment>

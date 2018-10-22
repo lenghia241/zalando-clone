@@ -21,23 +21,10 @@
     align-items: center;
     color: $color-white;
     font-size: 2rem;
-    font-family: "Open Sans Condensed", "Arial", sans-serif;
+    @include fontSlim;
 
     &__name {
       margin-bottom: 10%;
-    }
-
-    &__button {
-      padding: 1.2rem 2.5rem;
-      border: $border-slim-white;
-      background-color: transparent;
-      color: $color-white;
-      border-radius: 5px;
-      outline: none;
-
-      &:hover {
-        opacity: 0.6;
-      }
     }
   }
 }
