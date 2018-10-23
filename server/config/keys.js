@@ -1,4 +1,4 @@
 module.exports = {
-  mongoURI: "mongodb://nealvip241:nghiadz0108@ds125482.mlab.com:25482/todolist",
+  mongoURI: "mongodb://nealvip241:abc123@ds139193.mlab.com:39193/zalando-clone",
   secretOrKey: "secret"
 };

@@ -5,6 +5,7 @@ const cors = require("cors");
 const path = require("path");
 
 const todo = require("./routes/todo.js");
+const products = require("./routes/products.js");
 
 const app = express();
 
@@ -29,6 +30,7 @@ mongoose
 
 // Use Routes
 app.use("/api/todo", todo);
+app.use("/api/products", products);
 
 const port = process.env.PORT || 5000;
 
