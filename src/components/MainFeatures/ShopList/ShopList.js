@@ -1,8 +1,17 @@
+// @flow
 import React, { Component } from "react";
 
-class ShopList extends Component {
+type Props = {
+  /* ... */
+};
+
+type State = {
+  hover: number
+};
+
+class ShopList extends Component<Props, State> {
   state = {
-    hover: "0"
+    hover: 0
   };
   render() {
     const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -28,7 +37,8 @@ class ShopList extends Component {
           <div className="shopList__item-detail--description--text text-lower">
             <span>Up to -75%</span>
             <p>
-              <i class="far fa-clock" />&nbsp;2 days, 6 hours
+              <i class="far fa-clock" />
+              &nbsp;2 days, 6 hours
             </p>
           </div>
         </div>
