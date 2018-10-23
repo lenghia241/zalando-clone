@@ -28,7 +28,7 @@ class ShopList extends Component {
           <div className="shopList__item-detail--description--text text-lower">
             <span>Up to -75%</span>
             <p>
-              <i class="far fa-clock" />2 days, 6 hours
+              <i class="far fa-clock" />&nbsp;2 days, 6 hours
             </p>
           </div>
         </div>

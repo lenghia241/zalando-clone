@@ -23,7 +23,7 @@
 
     &-detail {
       &--description {
-        height: 200px;
+        height: 250px;
         color: #898989;
         background-size: 100%;
         background-repeat: no-repeat;
@@ -39,7 +39,7 @@
           & span {
             @include fontSlim;
             font-weight: 900;
-            font-size: 2rem;
+            font-size: 1.6rem;
           }
         }
       }
