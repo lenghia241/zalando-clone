@@ -1,6 +1,18 @@
 // @flow
 import React, { Component } from "react";
 
+const number: number = 5;
+const add = (num1: ?number, num2: 1 | 0) => {
+  return num1 + num2;
+};
+
+const add1 = (args: { name?: { age: number } }) => args.name.age;
+// ? đằng trước là nhận cả undefine, ? đằng sau là nhận cả null và undefined
+// | là hoặc
+add(number, 1);
+
+console.log(number);
+
 type Props = {
   /* ... */
 };
