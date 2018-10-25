@@ -2,14 +2,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 //Create Schema
-const ProductSchema = new Schema({
+const BrandSchema = new Schema({
   name: {
     type: String,
     required: true
   },
-  price: {
-    type: Number,
-    required: true
+  products: {
+    type: Schema.Types.Array,
+    ref: "product"
   },
   size: {
     type: String,
@@ -26,12 +26,7 @@ const ProductSchema = new Schema({
   delivery: {
     type: String,
     required: true
-  },
-  brand: {
-    type: Schema.Types.ObjectId,
-    ref: "Brand",
-    index: true
   }
 });
 
-module.exports = mongoose.model("Product", ProductSchema);
+module.exports = mongoose.model("Brand", BrandSchema);

@@ -5,7 +5,6 @@ const cors = require("cors");
 const path = require("path");
 
 const todo = require("./routes/todo.js");
-const products = require("./routes/products.js");
 
 const app = express();
 
@@ -17,7 +16,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "../")));
 
 // DB config
-const db = require("./config/keys").mongoURI;
+const db = require("./config/keys.js").mongoURI;
 
 //Connect to MongoDB
 mongoose
@@ -30,7 +29,6 @@ mongoose
 
 // Use Routes
 app.use("/api/todo", todo);
-app.use("/api/products", products);
 
 const port = process.env.PORT || 5000;
 
